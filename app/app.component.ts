@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class = "container">
-    <h1>Zoo Tracker</h1>
+  <h1 id="title">Looney Toons Zoo</h1>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
     <edit-animal [childSelectedAnimal]="selectedAnimal" (finishedEditingClicked)="finishedEditing()"></edit-animal>
     <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
@@ -17,9 +17,9 @@ export class AppComponent {
   selectedAnimal = null;
 
   masterAnimalList: Animal[] = [
-    new Animal('Arctic Fox', 'Moon', 2, 'Carnivore', 'Northern Trail', 5, 'Female', 'Cool shade', 'Loud noises'),
-    new Animal('Ocelot', 'Prince', 4, 'Carnivore', 'Tropical Rain Forest Building', 6, 'Male', 'Laying in the sunshine', 'Toys that are not rope-based'),
-    new Animal('Northwest Black Tailed Deer', 'Tinkerbell', 8, 'Herbivore', 'Northern Trail', 2, 'Female', 'Delicate roots and leaves', 'Loud noises') ];
+    new Animal('Rabbit', 'Buggs Bunny', 1, 'Herbivore', 'Northern Trail', 2, 'Male', 'Carrots', 'Elmer Fudd'),
+    new Animal('Coyote', 'Wile E Coyote', 4, 'Carnivore', 'Wolf run', 6, 'Male', 'Roadrunner meat', 'ACME mail-order devices'),
+    new Animal('Tasmanian Devil', 'Tasmanian Devil', 8, 'Omnivore', 'Northern Trail', 2, 'Male', 'To eat stuff', 'Not eating stuff') ];
 
 
   editAnimal(clickedAnimal) {
