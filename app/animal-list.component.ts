@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
   <ul>
-    <li [class]="dietColor(currentAnimal)" *ngFor="let currentAnimal of animals">{{currentAnimal.name}} <button (click)="editAnimalClick(currentAnimal)">Edit!</button></li>
+    <li [class]="dietColor(currentAnimal)" *ngFor="let currentAnimal of childAnimalList">{{currentAnimal.name}} <button (click)="editAnimalClick(currentAnimal)">Edit!</button></li>
   </ul>
   `
 })
